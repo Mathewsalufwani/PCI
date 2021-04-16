@@ -57,7 +57,6 @@ SecretStorage==2.3.1
 simplejson==3.13.2
 six==1.15.0
 sqlparse==0.4.1
-system-service==0.3
 systemd-python==234
 termcolor==1.1.0
 typing-extensions==3.7.4.3
