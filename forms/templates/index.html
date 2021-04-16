@@ -1,0 +1,129 @@
+{% load bootstrap3 %}
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" type="image/png" class="icon2" href="{% static "img/umbrella.png" %}"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prime Cover Insurance Agency</title>
+    {% block styles %}
+    {% bootstrap_css %}
+    <link rel="stylesheet" href="{% static 'css/app2.css' %}">
+    {% endblock %}
+</head>
+<body>
+  <body class="home">
+    <div class="navi">
+        <div class="logo">
+            <a href={% url 'welcome' %}><img src="{% static "img/logo.png" %}" alt=""></img></a>
+        </div>
+        
+        <div class="menu">
+            <a href={% url 'welcome' %}>Home</a>
+            <div class="motor">
+                <a href="#" class="motor">Motor</a>
+                <ul class="motordrop">
+                    <li><a href={% url 'privatemotor' %}>Private</a></li>
+                    <li><a href={% url 'commercial' %}>Commercial</a></li>
+                    <li><a href={% url 'psv' %}>PSV</a></li> 
+                </ul>
+            </div>
+            <a href={% url 'property' %}>Property</a>
+            <a href={% url 'fire' %}>Fire</a>
+            <a href={% url 'liability' %}>Liability</a>
+            <a href={% url 'marine' %}>Marine</a>
+            
+        </div>
+
+        <input type="checkbox" id="toggle"/>
+        <label for="toggle" class="stack">
+          <img src="{% static "img/Burger.png" %}" alt=""></img>
+        </label>
+         
+    </div>
+
+    <section class="hero grid">
+        <h1 class="title">PRIME COVER INSURANCE AGENCY</h1>
+        <p>We take care of your insurance needs to prevent you from
+            incurring unwanted losses from accidental incidents.
+            Why lose it when you can insure it.
+         </p>
+         <img src="{% static "img/ar2.png" %}" alt="" class="arrow"></img>
+         <img src="{% static "img/insurgg.png" %}" alt="" class="girl"></img>
+    </section>
+
+    <section class="about">
+        <h1>About Us</h1>
+        <hr></hr>
+        <p>Prime Cover Insurance Agency Limited is a firm with top notch capabilities committed
+            to being an agency of first choice for clients who demand the best in exceptional
+            service delivery and personalized expertise. Primarily, we help our clients to identify
+            their insurance needs, and buy the needed insurance on behalf of our clients on the
+            most favourable terms and price. We are also responsible for the processing and
+            negotiation of claims under the insurances we buy for our clients.
+        </p>
+        <div class="cards">
+            <div class="card1">
+                <h1>Our Mission</h1>
+                <p>To provide quality and professional insurance services to all our clients by
+                    committing to the highest standards of client service, employee morale and ethical
+                    practice without deviation.
+                </p>
+            </div>
+            <div class="card2">
+                <h1>Our Vision</h1>
+                <p>“Be the ideal contractual insurance services provider of choice across Kenya and East
+                    Africa empowering other businesses and households.”
+                </p>
+            </div>     
+        </div>
+    </section>
+
+    <section class="principles">
+        <h1>Our Principles</h1>
+        <div class="circleposition">
+            <div class="circle c1">
+                <p>Our Clients always come first. </p>
+            </div>
+            <div class="circle c2">
+                <p>We must provide the highest level of service with integrity. </p>
+            </div>
+            <div class="circle c3">
+                <p>Ensuring client satisfaction through the provision of quality service.</p>
+            </div>
+            <div class="circle c4">
+                <p>Communicating with our clients clearly and frequently </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="footer grid2">
+        <div class="links">
+            <h1>QUICK LINK</h1>
+            <p><a href={% url 'privatemotor' %}>Private</a> | 
+                <a href={% url 'commercial' %}>Commercial</a> | 
+                <a href={% url 'psv' %}>PSV</a> | 
+                <a href={% url 'property' %}>Property</a> | 
+                <a href={% url 'fire' %}>Fire</a> | 
+                <a href={% url 'liability' %}>Liability</a> |
+                <a href={% url 'marine' %}>Marine</a>  
+            </p>
+        </div>
+        <div class="contact">
+            <h1>CONTACT US</h1>
+            <p>Swing House, 3rd Floor Room 3</br>
+                Madaraka Centre</br>
+                P.O BOX 37874 - 00100 Nairobi</br>
+                Mr. Chris Ruto</br>
+                +254 701957617
+            </p>
+
+        </div>
+    </section>
+
+    <script src="{% static 'js/scripts.js' %}"></script>
+</body>
+</body>
+</html>

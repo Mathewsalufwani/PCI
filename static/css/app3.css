@@ -1,0 +1,867 @@
+body {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: 'monts';
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+}
+
+.grid2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2em;
+}
+
+@font-face {
+  font-family: 'montslight';
+  src: url("/fonts/Montserrat-Light.ttf");
+}
+
+@font-face {
+  font-family: 'montsmedium';
+  src: url("/fonts/Montserrat-Medium.ttf");
+}
+
+@font-face {
+  font-family: 'monts';
+  src: url("/fonts/Montserrat-Regular.ttf");
+}
+
+:root {
+  --primary: #D2CACA;
+  --secondary: #152966;
+  --foot: #1C264B;
+  --circle: #9299FF;
+}
+
+.nav {
+  position: fixed;
+  z-index: 1;
+  top: 0%;
+  display: flex;
+  background-color: white;
+  width: 100%;
+  height: 68px;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+}
+
+.nav .logo img {
+  margin-right: 2em;
+  left: 20%;
+  top: -2%;
+  position: relative;
+  height: 2.5em;
+}
+
+.nav .menu {
+  text-align: center;
+  margin-right: 3em;
+}
+
+.nav .menu a {
+  transition: .8s;
+}
+
+.nav .menu a:hover {
+  transition: .8s;
+  background-color: #1E2E7A;
+  color: white;
+}
+
+.nav .menu .motordrop {
+  display: none;
+  transition: .5s;
+  background-color: white;
+  position: absolute;
+  padding: 0%;
+  text-align: center;
+  margin-left: 7.3%;
+  margin-top: 2%;
+}
+
+.nav .menu .motordrop ul {
+  padding: 0%;
+}
+
+.nav .menu .motordrop li {
+  padding: 10px 18px 5px 0px;
+  justify-content: center;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.8);
+}
+
+.nav .menu .motor {
+  display: initial;
+}
+
+.nav .menu .motor:hover {
+  transition: .5s;
+  padding-bottom: 5%;
+}
+
+.nav .menu .motor:hover .motordrop {
+  transition: 5s;
+  display: block;
+  position: absolute;
+}
+
+.nav .menu .motor:hover .motordrop li:hover {
+  background-color: #1E2E7A;
+  color: white;
+}
+
+.nav .menu .motor:hover .motordrop li:hover a {
+  color: white;
+  background-color: inherit;
+}
+
+.nav .menu a {
+  color: rgba(0, 0, 0, 0.89);
+  margin-left: 1.5em;
+  padding: 10px;
+}
+
+.nav #toggle {
+  float: right;
+  display: none;
+}
+
+.nav label {
+  display: none;
+  cursor: pointer;
+  position: relative;
+  float: right;
+  margin-right: 45px;
+}
+
+.hero {
+  height: 100vh;
+  background-color: var(--secondary);
+  position: absolute;
+  top: 8%;
+}
+
+.hero h1 {
+  padding-top: 25%;
+  grid-column: 2/9;
+  color: var(--primary);
+  text-align: center;
+}
+
+.hero p {
+  position: relative;
+  top: -10%;
+  text-align: center;
+  margin-left: 10%;
+  color: var(--primary);
+  grid-column: 1/9;
+  grid-row: 2;
+}
+
+.hero .arrow {
+  position: relative;
+  left: 30%;
+  grid-column: 5;
+  bottom: 3em;
+}
+
+.hero .girl {
+  display: none;
+  width: 150%;
+  grid-column: 4/8;
+  grid-row: 2;
+}
+
+.about {
+  background-color: white;
+  position: absolute;
+  top: 100%;
+  padding-top: 5%;
+}
+
+.about p {
+  padding: 0 5%;
+}
+
+.about h1 {
+  text-align: center;
+}
+
+.about hr {
+  width: 35%;
+  margin-bottom: 1.5em;
+}
+
+.about .card1, .about .card2 {
+  margin-bottom: 3em;
+  background-color: #F9F9F9;
+  padding: 20px 35px;
+  margin-left: 5.5%;
+  width: 70%;
+  border: solid 1px rgba(0, 0, 0, 0.068);
+  border-radius: 2em;
+}
+
+.about .card1 h1, .about .card2 h1 {
+  text-align: center;
+}
+
+.about .card1 p, .about .card2 p {
+  padding: 0;
+}
+
+.about .card1 {
+  margin-top: 3em;
+}
+
+.principles {
+  background-color: var(--secondary);
+  padding: 50px 20px;
+  position: absolute;
+  top: 220%;
+  color: white;
+}
+
+.principles h1 {
+  text-align: center;
+  margin-bottom: 2em;
+}
+
+.principles .circle {
+  padding: 90px;
+  height: 70px;
+  background-color: var(--circle);
+  border-radius: 70%;
+  margin-bottom: 2em;
+}
+
+.principles .circle p {
+  padding-right: 5px;
+  padding-left: 5px;
+  text-align: center;
+  position: relative;
+  width: 150%;
+  top: 32%;
+  left: 50%;
+  transform: translate(-50%, -32%);
+}
+
+.pages {
+  overflow-y: hidden;
+}
+
+.pages .info {
+  padding-top: 35%;
+}
+
+.pages .info h1 {
+  text-align: center;
+}
+
+.pages .info hr {
+  width: 80%;
+}
+
+.pages .info p {
+  padding: 10px 20px;
+}
+
+.pages .info .requestslide img {
+  float: right;
+  position: fixed;
+  height: 3em;
+  bottom: 25%;
+  right: -2.3em;
+  transition: 2s;
+  transform: rotate(90deg);
+}
+
+.pages .info .requestslide img:hover {
+  transition: 2s;
+  bottom: 40%;
+}
+
+.footer2 {
+  background-color: var(--foot);
+  color: white;
+  padding: 5%;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  position: fixed;
+  bottom: 0%;
+  width: 100%;
+}
+
+.footer2 a {
+  color: white;
+}
+
+.inquiryform {
+  position: relative;
+  top: 15%;
+}
+
+.inquiryform h1 {
+  margin-bottom: 1em;
+  text-align: center;
+}
+
+.inquiryform form {
+  width: 100%;
+}
+
+.inquiryform form input, .inquiryform form textarea {
+  padding: 15px;
+  border-radius: 7px;
+  background-color: rgba(212, 226, 236, 0.411);
+  text-align: left;
+  border: thin;
+  margin-left: 6%;
+  width: 80%;
+}
+
+.inquiryform form input {
+  margin-bottom: 10px;
+}
+
+.inquiryform form textarea {
+  resize: none;
+  padding: 30px 15px;
+}
+
+.inquiryform form button {
+  background-color: #5772B0;
+  margin: 4% 0 5% 6%;
+  left: 0.1em;
+  width: 88%;
+  padding: 10px 0px;
+  border-radius: 16px;
+  border: none;
+  color: rgba(255, 255, 255, 0.788);
+  font-weight: 400;
+  font-size: 0.7em;
+}
+
+.inquiryform form button:hover {
+  background-color: #4a66b6c7;
+}
+
+.home .footer {
+  position: absolute;
+  top: 420%;
+  right: 20%;
+  text-align: center;
+  padding-bottom: 5%;
+}
+
+.home .footer .links {
+  grid-column: 1;
+}
+
+.home .footer .contact {
+  grid-column: 2;
+}
+
+@media only screen and (max-width: 1040px) {
+  .nav label {
+    display: block;
+  }
+  .nav .menu {
+    display: none;
+    top: 12em;
+    left: 7.45em;
+    position: relative;
+    text-align: center;
+    width: 60%;
+  }
+  .nav .menu a {
+    background-color: white;
+    display: block;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.267);
+  }
+  .nav .menu .motor {
+    display: inline-flex;
+    justify-content: center;
+    width: 100%;
+  }
+  .nav .menu .motor .motordrop {
+    right: 8.5em;
+    top: 11%;
+  }
+  .nav .menu .motor .motordrop a {
+    border-bottom: none;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .nav {
+    font-size: 12px;
+  }
+  .nav .menu {
+    position: absolute;
+    left: 40%;
+    top: 85%;
+  }
+  .hero {
+    font-size: 12px;
+  }
+  .hero .arrow {
+    height: 2em;
+  }
+  .about {
+    font-size: 12px;
+  }
+  .principles {
+    font-size: 12px;
+    top: 225%;
+  }
+  .home .footer {
+    font-size: 11px;
+    position: absolute;
+    top: 425%;
+    left: 12%;
+  }
+  .pages {
+    font-size: 13px;
+    /* .info{
+            padding-top: 35%;
+        } */
+  }
+  .request {
+    font-size: 11px;
+    /*  .footer2{
+            margin-top: 10%;
+        } */
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .hero {
+    height: 150vh;
+    font-size: 12px;
+  }
+  .hero p {
+    position: relative;
+    top: -30%;
+  }
+  .hero .arrow {
+    position: relative;
+    top: -100%;
+    height: 2em;
+  }
+  .about {
+    font-size: 12px;
+  }
+  .principles {
+    top: 230%;
+    font-size: 12px;
+  }
+  .home .footer {
+    position: absolute;
+    top: 455%;
+    left: 12%;
+    font-size: 11px;
+  }
+  .pages {
+    font-size: 12px;
+  }
+  .pages .info {
+    padding-top: 45%;
+  }
+  .footer2 {
+    font-size: 10px;
+  }
+  /* .request{
+        .footer2{
+            margin-top: 16%;
+        } 
+    } */
+}
+
+@media only screen and (min-width: 375px) {
+  body {
+    font-size: 14px;
+  }
+  .arrow {
+    height: 2em;
+  }
+  .principles {
+    top: 225%;
+  }
+  .footer {
+    font-size: 12px;
+    top: 423%;
+    left: 8%;
+  }
+  .footer p {
+    position: relative;
+    left: 9%;
+  }
+  .footer h1 {
+    position: relative;
+    left: 8%;
+  }
+  .pages {
+    font-size: 14px;
+    /*  .footer2{
+            font-size: 12px;
+            bottom: -35.9%;
+        } */
+  }
+  .request {
+    font-size: 12px;
+    /*  .footer2{
+            margin-top: 10%;
+        } */
+  }
+}
+
+@media (min-width: 414px) {
+  .home .footer {
+    position: absolute;
+    top: 405%;
+  }
+  .home .footer p {
+    position: relative;
+    left: 7%;
+  }
+  .home .footer h1 {
+    position: relative;
+    left: 8%;
+  }
+}
+
+@media (min-width: 414px) and (min-height: 731px) and (min-width: 411px) {
+  .principles {
+    top: 210%;
+  }
+  .home .footer {
+    left: 12%;
+    top: 390%;
+  }
+  .pages {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 414px) and (min-height: 812px) and (min-width: 375px) {
+  .principles {
+    top: 205%;
+  }
+  .home .footer {
+    top: 368%;
+    left: 7%;
+  }
+  .pages {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (min-width: 414px) and (min-width: 768px) {
+  body {
+    font-size: 20px;
+  }
+  .nav .menu {
+    top: 12em;
+  }
+  .nav .menu a {
+    height: 2em;
+  }
+  .about {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+  .about .card1, .about .card2 {
+    margin-left: 10%;
+  }
+  .principles .circle {
+    position: relative;
+    width: 50%;
+    padding: 5em;
+    height: 120px;
+    left: 12%;
+  }
+  .principles .circle p {
+    width: 80%;
+  }
+  .pages .info {
+    padding-right: 6em;
+    padding-top: 10%;
+  }
+  .pages .info h1 {
+    text-align: left;
+    margin-left: 5%;
+  }
+  .pages .info hr {
+    float: left;
+    margin-left: 5%;
+  }
+  .pages .info p {
+    width: 70%;
+    margin-left: 3%;
+    margin-top: 5%;
+  }
+  .pages .footer2 {
+    text-align: center;
+  }
+}
+
+@media (min-width: 414px) and (min-height: 500px) and (min-width: 1024px) {
+  .home {
+    font-size: 25px;
+  }
+  .home .footer {
+    font-size: 23px;
+    top: 356%;
+  }
+  .nav {
+    padding: 20px;
+  }
+  .nav .logo img {
+    height: 3.2em;
+  }
+  .nav .stack {
+    margin-right: 5em;
+  }
+  .nav .stack img {
+    height: 1.5em;
+  }
+  .nav .menu {
+    left: 25%;
+  }
+  .hero {
+    font-size: 35px;
+  }
+  .hero h1 {
+    font-size: 45px;
+    grid-column: 2/9;
+  }
+  .hero p {
+    margin-top: 35%;
+    grid-column: 1/5;
+    grid-row: 2;
+  }
+  .hero .girl {
+    position: relative;
+    display: block;
+    grid-column: 5/8;
+    top: 10%;
+    left: 17%;
+  }
+  .hero .arrow {
+    height: 1.5em;
+    top: -7em;
+    left: -7em;
+  }
+  .about {
+    font-size: 27px;
+  }
+  .principles {
+    font-size: 27px;
+  }
+}
+
+@media only screen and (min-width: 414px) and (min-width: 1025px) {
+  .nav {
+    padding: 4px;
+  }
+  .nav .logo img {
+    height: 2.2em;
+  }
+  .nav .stack img {
+    height: 1em;
+  }
+  .nav .menu {
+    font-size: 18px;
+  }
+  .hero {
+    overflow: hidden;
+    height: 100vh;
+    margin-top: 0%;
+    font-size: 22px;
+  }
+  .hero .girl {
+    position: absolute;
+    top: -8.5em;
+    grid-column: 7/9;
+  }
+  .hero .arrow {
+    top: -8em;
+    left: -4em;
+  }
+  .hero h1 {
+    position: relative;
+    top: -7%;
+    left: -4em;
+    font-size: 30px;
+  }
+  .hero p {
+    position: relative;
+    top: -10em;
+    grid-column: 1/7;
+  }
+  .about {
+    font-size: 18px;
+  }
+  .about .cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    font-size: 15px;
+    margin-top: 1em;
+  }
+  .about .cards .card2 {
+    margin-top: 3em;
+  }
+  .principles {
+    top: 180%;
+    font-size: 18px;
+  }
+  .principles h1 {
+    margin-left: -12%;
+  }
+  .principles .circleposition {
+    width: 100vw;
+    margin-left: 7em;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 2.5em;
+  }
+  .principles .circleposition .c1 {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .principles .circleposition .c2 {
+    grid-column: 2;
+    grid-row: 1;
+  }
+  .principles .circleposition .c3 {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .principles .circleposition .c4 {
+    grid-column: 2;
+    grid-row: 2;
+  }
+  .principles .circleposition .circle {
+    margin-bottom: .1em;
+  }
+  .principles .circleposition .circle p {
+    width: 140%;
+  }
+  .home .footer {
+    font-size: 15px;
+    top: 310%;
+    padding-bottom: 2em;
+  }
+}
+
+@media only screen and (min-width: 414px) and (min-width: 1130px) {
+  .hero .girl {
+    top: -60%;
+  }
+  .hero .arrow {
+    top: -9em;
+    left: -78%;
+  }
+  .hero h1 {
+    top: -11%;
+  }
+  .hero p {
+    top: -12em;
+  }
+  .about {
+    padding-top: 1em;
+  }
+  .principles h1 {
+    margin-left: -6%;
+  }
+  .principles .circle {
+    width: 52%;
+    margin-left: 2%;
+    margin-right: 5%;
+    font-size: 14px;
+  }
+  .principles .circleposition {
+    justify-content: space-around;
+  }
+  .principles .circleposition .c2 {
+    margin-left: 4%;
+  }
+  .principles .circleposition .c3 {
+    left: -5%;
+    grid-row: 1;
+    grid-column: 4;
+  }
+  .principles .circleposition .c4 {
+    left: -5%;
+    grid-row: 1;
+    grid-column: 5;
+  }
+  .home .footer {
+    top: 251%;
+  }
+}
+
+@media only screen and (min-width: 414px) and (min-width: 1200px) {
+  .hero .girl {
+    top: -80%;
+  }
+  .hero h1 {
+    top: -3em;
+  }
+  .hero p {
+    top: -14.2em;
+  }
+  .hero .arrow {
+    height: 1.5em;
+    top: -10em;
+  }
+  .principles {
+    overflow: hidden;
+  }
+  .principles h1 {
+    margin-left: -4em;
+  }
+  .principles .circle {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 414px) and (max-width: 2000px) and (min-width: 1300px) {
+  .hero h1 {
+    top: -30%;
+    left: -15%;
+  }
+  .hero P {
+    top: -80%;
+  }
+  .hero .arrow {
+    top: -12em;
+    left: -78%;
+  }
+  .hero .girl {
+    top: -98%;
+  }
+  .principles h1 {
+    margin-left: -6%;
+  }
+}
+
+@media only screen and (min-width: 414px) and (min-width: 1650px) {
+  .hero .girl {
+    top: -90%;
+  }
+}
+
+/*# sourceMappingURL=app3.css.map */

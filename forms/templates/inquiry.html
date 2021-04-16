@@ -1,0 +1,96 @@
+{% load bootstrap3 %}
+{% load static%}
+{% load crispy_forms_tags %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" type="image/png" class="icon2" href="{% static "img/umbrella.png" %}"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inquiry</title>
+    {% block styles %}
+    {% bootstrap_css %}
+    <link rel="stylesheet" href="{% static 'css/inquiry.css' %}">
+  {% endblock %}
+</head>
+<body>
+  <div class="navi">
+    <div class="logo">
+        <a href={% url 'welcome' %}><img src="{% static "img/logo.png" %}" alt=""></img></a>
+    </div>
+    
+    <div class="menu">
+        <a href={% url 'welcome' %}>Home</a>
+        <div class="motor">
+            <a href="#" class="motor">Motor</a>
+            <ul class="motordrop">
+                <li><a href={% url 'privatemotor' %}>Private</a></li>
+                <li><a href={% url 'commercial' %}>Commercial</a></li>
+                <li><a href={% url 'psv' %}>PSV</a></li> 
+            </ul>
+        </div>
+        <a href={% url 'property' %}>Property</a>
+        <a href={% url 'fire' %}>Fire</a>
+        <a href={% url 'liability' %}>Liability</a>
+        <a href={% url 'marine' %}>Marine</a>
+        
+    </div>
+
+    <input type="checkbox" id="toggle"/>
+    <label for="toggle" class="stack">
+      <img src="{% static "img/Burger.png" %}" alt=""></img>
+    </label>
+     
+</div><br><br><br><br>
+  
+     
+  <div class="message">
+    {% if messages %}
+      {% for message in messages %}
+        {% bootstrap_javascript jquery=True %}
+        {% bootstrap_messages message %}
+      {% endfor %}
+    {% endif %}
+  </div>
+  
+  <div class="hl">
+    <img class="icon3" style="float:left" src="{% static "img/info2.png" %}" alt=""></img><h1>Inquiry</h1>
+  </div>
+  <hr class="line">
+    <div class="container-fluid">
+        <form class="form" action="{%url 'inquiry'%}" method="post">
+          {%csrf_token%}
+          {% bootstrap_form letterForm layout='inline'  %}
+          <div class="sub">
+            <input type="submit" value="Submit" class="btn btn-primary btn-sm btn-block ">
+          </div>
+          
+        </form>
+      
+    </div>
+    <div class="footer">
+      <div class="quick-link">
+        <h2>QUICK LINK</h2>
+        <p><a href={% url 'welcome' %}>Home</a> | 
+          <a href={% url 'privatemotor' %}>Private</a> | 
+          <a href={% url 'commercial' %}>Commercial</a> | 
+          <a href={% url 'psv' %}>PSV</a> | 
+          <a href={% url 'property' %}>Property</a> | 
+          <a href={% url 'fire' %}>Fire</a> | 
+          <a href={% url 'liability' %}>Liability</a> |
+          <a href={% url 'marine' %}>Marine</a>  
+      </p>
+      </div>
+      <div class="contact">
+        <h2>CONTACT</h2>
+        <p>Swing House, 3rd Floor Room 3</p>
+        <p>Madaraka Centre</p>
+        <p>P.0 Box 37874 - 00100 Nairobi</p>
+        <p>Mr. Chris Ruto</p>
+        <p>+254 701957617</p>
+      </div>
+    </div>
+    <script src="{% static 'js/scripts.js' %}"></script>
+</body>
+</html>
