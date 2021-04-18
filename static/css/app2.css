@@ -165,13 +165,14 @@ li, ul, a {
 }
 
 .hero {
+  overflow: hidden;
   height: 100vh;
   background-color: var(--secondary);
   top: 8%;
 }
 
 .hero h1 {
-  padding-top: 40%;
+  padding-top: 30%;
   -ms-grid-column: 2;
   -ms-grid-column-span: 7;
   grid-column: 2/9;
@@ -194,15 +195,19 @@ li, ul, a {
 
 .hero .arrow {
   position: relative;
-  left: 30%;
+  left: -55px;
+  top: -180px;
   -ms-grid-column: 5;
   grid-column: 5;
   bottom: 3em;
 }
 
 .hero .girl {
-  display: none;
-  width: 150%;
+  display: block;
+  width: 210px;
+  height: 411px;
+  padding-top: 23%;
+  margin-left: 121px;
   -ms-grid-column: 4;
   -ms-grid-column-span: 4;
   grid-column: 4/8;
@@ -445,10 +450,21 @@ li, ul, a {
     height: 700px;
   }
 
+  .hero .girl {
+    display: none;
+    width: 150%;
+    -ms-grid-column: 4;
+    -ms-grid-column-span: 4;
+    grid-column: 4/8;
+    -ms-grid-row: 2;
+    grid-row: 2;
+  }
+
   .hero .arrow {
     position: relative;
     top: -5%;
     height: 2em;
+    left: 30%;
   }
   
   .hero p {
