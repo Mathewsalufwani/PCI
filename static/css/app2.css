@@ -522,7 +522,7 @@ li, ul, a {
   .hero .arrow {
     bottom: 0%;
     left: 180px;
-    top: 75%;
+    top: -150px;
   }
 
   .hero .girl {
