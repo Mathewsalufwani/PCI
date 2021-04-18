@@ -447,12 +447,15 @@ li, ul, a {
 
   .hero {
     font-size: 12px;
-    height: 700px;
+    height: 630px;
   }
 
   .hero .girl {
-    display: none;
-    width: 150%;
+    display: block;
+    width: 177px;
+    margin-left: 71px;
+    padding-top: 65%;
+    height: auto;
     -ms-grid-column: 4;
     -ms-grid-column-span: 4;
     grid-column: 4/8;
@@ -462,14 +465,14 @@ li, ul, a {
 
   .hero .arrow {
     position: relative;
-    top: -5%;
+    top: -95px;
     height: 2em;
-    left: 30%;
+    left: -80px;
   }
   
   .hero p {
     position: relative;
-    top: -30%;
+    top: 10%;
   }
 
   .hero h1 {
