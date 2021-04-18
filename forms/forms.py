@@ -5,7 +5,7 @@ cover_choice= [
     ('third-party', 'Third-party'),
 ]
 
-manufacture_year= [tuple([x,x]) for x in range(1950,2023)]
+manufacture_year= [tuple([x,x]) for x in range(2012,2023)]
 
 
 class InquiryForm(forms.Form):
