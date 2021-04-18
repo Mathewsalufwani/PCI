@@ -182,7 +182,7 @@ li, ul, a {
 
 .hero p {
   position: relative;
-  top: -10%;
+  top: 7%;
   text-align: center;
   margin-left: 10%;
   color: var(--primary);
@@ -472,6 +472,10 @@ li, ul, a {
     top: -30%;
   }
 
+  .hero h1 {
+    padding-top: 40%;
+  }
+
   .about {
     font-size: 12px;
   }
@@ -733,6 +737,7 @@ li, ul, a {
     width: 150%;
     height: auto;
     margin-left: 0%;
+    padding-top: 0%;
   }
 
   .hero .arrow {
