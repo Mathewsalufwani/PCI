@@ -166,7 +166,7 @@ li, ul, a {
 
 .hero {
   overflow: hidden;
-  height: 100vh;
+  height: 630px;
   background-color: var(--secondary);
   top: 8%;
 }
@@ -195,7 +195,7 @@ li, ul, a {
 
 .hero .arrow {
   position: relative;
-  left: -55px;
+  left: -100px;
   top: -180px;
   -ms-grid-column: 5;
   grid-column: 5;
