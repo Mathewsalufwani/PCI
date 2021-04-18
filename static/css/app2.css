@@ -684,6 +684,7 @@ li, ul, a {
   }
 
   .hero h1 {
+    padding-top: 30%;
     font-size: 45px;
     -ms-grid-column: 2;
     -ms-grid-column-span: 7;
@@ -701,6 +702,8 @@ li, ul, a {
     grid-column: 1/6;
     -ms-grid-row: 2;
     grid-row: 2;
+    margin-right: 0px;
+    margin-left: 10%;
   }
 
   .hero .girl {
@@ -711,6 +714,8 @@ li, ul, a {
     grid-column: 5/8;
     top: -35%;
     left: 55%;
+    width: 150%;
+    margin-left: 0%;
   }
 
   .hero .arrow {
